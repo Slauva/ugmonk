@@ -1,0 +1,83 @@
+b {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: $grey;
+}
+
+.product {
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 31px 20px;
+        margin-bottom: 66px;
+    }
+    &__image {
+        width: 275px;
+        height: 341px;
+    }
+    &__title {
+        font-size: 15px;
+        line-height: 18px;
+        color: $black;
+    }
+    &__cost {
+        font-size: 13px;
+        line-height: 13px;
+        color: #808080;
+        &--sale {
+            color: $red;
+        }
+    }
+    &__item {
+        cursor: pointer;
+        width: 275px;
+    }
+    &__wrap {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    &__btn {
+        display: block;
+
+        width: 302px;
+        height: 56px;
+
+        font-size: 20px;
+        line-height: 56px;
+
+        background-color: $black;
+        text-align: center;
+    }
+    &__tabs {
+        display: flex;
+        margin-bottom: 55px;
+        align-items: center;
+        justify-content: center;
+    }
+    &__tab {
+        color: $gray;
+        font-size: 17px;
+        line-height: 27px;
+        margin-right: 48px;
+
+        cursor: pointer;
+
+        &.active {
+            color: $black;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+
+                height: 1px;
+                width: 100%;
+
+                background-color: $black;
+            }
+        }
+    }
+}
